@@ -39,13 +39,12 @@ void loop() {
       {
         for (int b = pion_pozycja;  b < onerandom; b++)
         {
-          int  c = poziom_pozycja;
           pion.write(b);
           Serial.println(b);
-          poziom.write(c);
+          poziom.write(poziom_pozycja);
           delay(predkosc);
-          Serial.println(c);
-          c++;
+          Serial.println(poziom_pozycja);
+          poziom_pozycja++;
 
         }
       }
@@ -53,40 +52,37 @@ void loop() {
       {
         for (int b = pion_pozycja; b > onerandom; b--)
         {
-          int c = poziom_pozycja;
           pion.write(b);
           Serial.println(b);
-          poziom.write(c);
+          poziom.write(poziom_pozycja);
           delay(predkosc);
-          Serial.println(c);
-          c++;
+          Serial.println(poziom_pozycja);
+          poziom_pozycja++;
         }
       }
       else if ((poziom_pozycja > onerandom) && (pion_pozycja > onerandom))
       {
         for (int c = poziom_pozycja; c > onerandom; c--)
         {
-          int b = pion_pozycja;
           poziom.write(c);
           Serial.println(c);
-          pion.write(b);
+          pion.write(pion_pozycja);
           delay(predkosc);
-          Serial.println(b);
-          b--;
+          Serial.println(pion_pozycja);
+          pion_pozycja--;
 
         }
       }
       else if ((pion_pozycja < onerandom) && (poziom_pozycja > onerandom))
       {
-        for (int b = pion_pozycja; b < onerandom; b++)
+        for (int b = poziom_pozycja; b > onerandom; b++)
         {
-          int c = poziom_pozycja;
-          pion.write(b);
-          Serial.println(b);
-          poziom.write(c);
+          pion.write(pion_pozycja);
+          Serial.println(pion_pozycja);
+          poziom.write(b);
           delay(predkosc);
-          Serial.println(c);
-          c--;
+          Serial.println(b);
+          pion_pozycja++;
         }
       }
       delay(200);
