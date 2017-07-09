@@ -41,7 +41,6 @@ void loop() {
         {
           int  c = poziom_pozycja;
           pion.write(b);
-          delay(predkosc);
           Serial.println(b);
           poziom.write(c);
           delay(predkosc);
@@ -56,7 +55,6 @@ void loop() {
         {
           int c = poziom_pozycja;
           pion.write(b);
-          delay(predkosc);
           Serial.println(b);
           poziom.write(c);
           delay(predkosc);
@@ -70,7 +68,6 @@ void loop() {
         {
           int b = pion_pozycja;
           poziom.write(c);
-          delay(predkosc);
           Serial.println(c);
           pion.write(b);
           delay(predkosc);
@@ -85,7 +82,6 @@ void loop() {
         {
           int c = poziom_pozycja;
           pion.write(b);
-          delay(predkosc);
           Serial.println(b);
           poziom.write(c);
           delay(predkosc);
